@@ -17,6 +17,7 @@ output: html_document
     background-color: #ffffff;
     border-color: #ffffff;
 }
+
 ```
 
 ```{r setup, include=FALSE}
@@ -53,6 +54,7 @@ BiocManager::install("Rgraphviz")
 
 ```{r,message=FALSE}
 pacman::p_load(Rgraphviz,gRbase,gRain,RBGL,ggdag,ggplot2)
+
 ```
 
 ### Creating a graph object
@@ -68,6 +70,7 @@ ug0 <- ug(~a:b+b:c:d+e)
 ug0 <- ug(~a*b+b*c*d+e)
 ug0 <- ug(c("a","b"),c("b","c","d"),"e")
 plot(ug0)
+
 ```
 
 ##### Attributes
